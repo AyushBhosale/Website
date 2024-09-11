@@ -1,0 +1,83 @@
+
+body{
+  font-family: sans-serif;
+  background-color: #F5F7F8;
+}
+.NavBar{
+  padding-left: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 10px -10px #000000;
+
+}
+.navRight{
+  list-style: none;
+  display: flex;
+  /* gap: 6%; */
+  width: 40%;
+  justify-content: space-evenly;
+}
+.link{
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  color: #000;
+}
+.link::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+.link:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+/* Image Section */
+.midSection{
+  position: relative;
+  /* color: white; */
+}
+#medImage{
+  z-index: -1; 
+  height: 350px;
+  width: 100%;
+  border-radius: 1%;
+}
+.leftWords{
+  position: absolute;
+  top: 24.5%;
+  width: 100px;
+  left: 7.5%;
+  font-weight: bold;
+  font-size: xx-large;
+}
+.thinFont{
+  font-weight: 300;
+}
+
+/* bottom */
+.card{
+  /* border: #000 solid 1px; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 20.5%;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.6);
+}
+.diagnosis{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: auto;
+}
